@@ -2,24 +2,18 @@
 
 2.password ("hit enter")
 
-3.CREATE DATABASE ecommerce_phone;
+3.CREATE DATABASE ecommerce_znova;
 
 4.SHOW DATABASES;
 
-5.USE ecommerce_phone;
+5.USE ecommerce_znova;
 
-6.  CREATE TABLE items (
-    id INT AUTO_INCREMENT PRIMARY KEY,  -- Auto-incrementing primary key
-    product_name VARCHAR(100) NOT NULL,  -- Product name, cannot be null
-    image VARCHAR(100) NOT NULL,         -- Image URL or name, cannot be null
-    price INT NOT NULL                   -- Price, cannot be null
+6. CREATE TABLE items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(255) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    favourite ENUM('true', 'false') NOT NULL
 );
-
-
-7.  CREATE TABLE favourite (
-        product_id INT UNIQUE,  -- product_id is unique in this table
-        FOREIGN KEY (product_id) REFERENCES items(id) -- Foreign key linking to the items table
-    );
 
 
 

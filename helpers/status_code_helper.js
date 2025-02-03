@@ -1,8 +1,8 @@
 const OK = (data, message = "Success") => ({
     code: 200,
-    status: "OK",
-    data,
+    status: "OK",    
     message,
+    data,
   });
   
   const NOT_FOUND = (message = "NOT FOUND!") => ({
